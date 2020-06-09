@@ -1,0 +1,79 @@
+#popular-recipe {
+  width: 100%;
+  background: url('../images/picture-lamb-hummus.png') right -130px top 148px no-repeat;
+
+  .popular-recipe-wrapper {
+    width: $desktop-width;
+    margin: 0 auto;
+  }
+  .popular-span {
+    @include font($fontFamily: $lato-bold, $fontSize: 10px, $fontColor: #fff);
+    display: inline-block;
+    width: 149px;
+    height: 25px;
+    border-radius: 10px;
+    background-color: $green-lightest;
+    line-height: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin: 103px 0 22px;
+  }
+  h2 {
+    @include font($fontFamily: $lora-bold, $fontSize: 38px);
+    line-height: 1.289;
+    max-width: 578px;
+  }
+  p {
+    @include font($fontColor: $blue-secondary);
+    line-height: 1.625;
+    max-width: 600px;
+    margin: 29px 0 58px;
+  }
+  .ingridients {
+    display: flex;
+    flex-wrap: wrap;
+    h3 {
+      @include font($fontFamily: $lora-bold, $fontSize: 18px);
+      width: 100%;
+      margin-bottom: 29px;
+    }
+    .lamb h4,
+    .hummus h4 {
+      @include font($fontFamily: $lato-bold, $fontColor: $blue-secondary);
+    }
+    .lamb {
+      min-width: 281/1181 * 100%;
+      margin-right: 99/1181 * 100%;
+    }
+    .lamb ul li,
+    .hummus ul li {
+      @include font($fontColor: $blue-secondary);
+      padding-top: 20px;
+      &:before {
+        content: '\2011';
+        margin-left: 5px;
+        margin-right: 6px;
+        color: #9297b0;
+      }
+    }
+  }
+  button {
+    @include button-orange;
+    margin: 81px 0 152px;
+  }
+}
+//REDUCING SIZE OF THE PICTURE SO ID DONT OVERLAP WITH TEXT
+
+@media screen and (max-width: 1150px) {
+  #popular-recipe {
+    background-position: right -196px top 230px;
+    background-size: 623px auto;
+    //345
+  }
+}
+@media screen and (max-width: 1030px) {
+  #popular-recipe {
+    background-position: right -300px top 230px;
+  }
+}

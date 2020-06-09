@@ -1,0 +1,115 @@
+//LOWERING THE WIDTH OF SEARCH BOX BECAUSE OF HAMBURGER
+@media screen and (max-width: 600px) {
+  .search {
+    max-width: 89% !important;
+  }
+}
+@media screen and (max-width: 450px) {
+  .search {
+    max-width: 85% !important;
+  }
+  //MOVING LABEL SO IT DON'T OVERLAP WITH SEARCH ICON
+  .floating-label {
+    left: 20% !important;
+  }
+}
+
+//MAIN STYLE FOR MOBILE
+@media screen and (max-width: 375px) {
+  #navigation {
+    width: $mobile-width;
+    padding-top: 21px;
+    #menu {
+      li {
+        &:not(.logo) {
+          top: 0;
+        }
+      }
+      padding: 0;
+      .logo {
+        position: absolute;
+        z-index: 5;
+        img {
+          width: 159px;
+        }
+      }
+      .search {
+        border-bottom-width: 2px;
+        .search-icon {
+          top: 1px;
+          right: 17px;
+          img {
+            width: 23px;
+          }
+        }
+      }
+
+      .hamburger {
+        img {
+          width: 25px;
+        }
+      }
+      .menu-item:not(.search):not(.hamburger) {
+        display: none;
+      }
+    }
+    //SEARCH
+    .search-clicked {
+      .logo {
+        display: none;
+      }
+      .hamburger {
+        top: -6px !important;
+        right: -25px !important;
+      }
+      .search {
+        top: -9px !important;
+        width: 100%;
+        border-bottom: 3px solid $orange-secondary;
+        .floating-label {
+          font-size: 12px;
+          top: 21px;
+          left: 21% !important;
+        }
+        .floating-label-lift {
+          font-size: 10px;
+          top: 0;
+        }
+        .search-icon {
+          top: 16px !important;
+          right: -15px !important;
+        }
+        .search-bar {
+          width: 80%;
+          right: -28px !important;
+        }
+      }
+    }
+    // -----------------------------
+    //DROPDOWN MENU
+    // -----------------------------
+
+    .dropdown-menu {
+      .dropdown-content {
+        top: 101px;
+        .home {
+          &:after {
+            @include underline-scale(0.3, 3px);
+          }
+        }
+
+        a {
+          padding: 23px;
+          font-size: 24px;
+        }
+      }
+      .close-btn {
+        top: 27px;
+        right: 19px;
+        img {
+          width: 23px;
+        }
+      }
+    }
+  }
+}

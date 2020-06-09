@@ -1,0 +1,80 @@
+//SETTING SMALLER PADDINGS BECAUSE DISTANCE BETWEEN ELEMENTS IS TOO BIG
+//POSITIONING ILLUSTRATION LOWER FOR ESTETICS
+@media screen and (min-width: 375px) and (max-width: 1000px) {
+  #offers {
+    height: 900px;
+    h2 {
+      padding-top: 40px;
+    }
+    .paragraph-offers {
+      padding-bottom: 60px;
+    }
+  }
+  #offers #tabs .tab-content .illustration-tab img {
+    position: relative;
+    top: 70px;
+  }
+}
+//EXPANDING CONTENT AREA AT SAME MAX-WIDTH AS HEADER
+@media screen and (min-width: 375px) and (max-width: 900px) {
+  #offers #tabs .tab-content {
+    width: $tablet-width;
+  }
+}
+//MAIN TABLET STYLE
+@media screen and (min-width: 375px) and (max-width: 768px) {
+  #offers {
+    height: 834px;
+    h2 {
+      font-size: 30px;
+      padding-top: 62px;
+    }
+
+    .paragraph-offers {
+      font-size: 16px;
+      padding: 23px 0 54px;
+    }
+
+    // TABS
+    #tabs {
+      #tab {
+        button {
+          font-size: 26px;
+        }
+      }
+      .tab-content {
+        padding-top: 48px;
+        .text-tab {
+          padding-top: 17px;
+
+          h3 {
+            font-size: 38px;
+            line-height: 1.369;
+            br {
+              display: none;
+            }
+          }
+          p {
+            font-size: 16px;
+            line-height: 1.75;
+            &:first-of-type {
+              padding: 31px 0 28px;
+            }
+          }
+          button {
+            position: relative;
+            top: 0;
+          }
+        }
+        .illustration-tab {
+          width: 223/720 * 100%;
+
+          img {
+            max-width: 223px;
+            top: 43px;
+          }
+        }
+      }
+    }
+  }
+}

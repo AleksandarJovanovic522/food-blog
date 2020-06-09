@@ -1,0 +1,48 @@
+#header {
+  width: 100%;
+  height: 835px;
+  background: url('../images/shape-header-background.png') no-repeat
+    $orange-lighter 100/1181 * 100% 193px;
+
+  #hero-header {
+    display: flex;
+    width: $desktop-width;
+    margin: 149px auto 0;
+
+    #introduction-header {
+      width: 50%;
+
+      h1 {
+        @include font(
+          $fontFamily: $lora-bold,
+          $fontSize: 68px,
+          $fontColor: #fff
+        );
+        line-height: 1.2;
+      }
+
+      p {
+        @include font($fontSize: 18px, $fontColor: #fff);
+        width: 380px;
+        line-height: 1.556;
+        margin: 40px 0 45px;
+      }
+
+      button {
+        @include button-orange;
+      }
+    }
+
+    #illustration-header {
+      width: 50%;
+
+      img {
+        position: relative;
+        right: -12.7%;
+        top: -44px;
+        width: 100%;
+        max-width: 583px;
+      }
+    }
+  }
+}

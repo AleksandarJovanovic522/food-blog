@@ -1,0 +1,46 @@
+@media screen and (max-width: 900px) {
+  #popular-recipe {
+    background-position: right -320px top 230px;
+    .popular-recipe-wrapper {
+      width: $tablet-width;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  #popular-recipe {
+    background-position: right -196px top 345px;
+
+    .popular-span {
+      margin: 67px 0 20px;
+    }
+
+    h2 {
+      max-width: 410px;
+      font-size: 32px;
+      line-height: 1.531;
+    }
+    p {
+      max-width: 400px;
+      margin: 19px 0 35px;
+      line-height: 1.75;
+    }
+    .ingridients {
+      .lamb {
+        width: 100%;
+        min-width: 0;
+        margin-right: 0;
+        margin-bottom: 45px;
+      }
+    }
+    button {
+      margin-top: 61px;
+    }
+  }
+}
+
+//REDUCING SIZE OF IMAGE SO IT DONT OVERLAP WITH TEXT
+@media screen and (max-width: 600px) {
+  #popular-recipe {
+    background-position: right -300px top 345px;
+  }
+}

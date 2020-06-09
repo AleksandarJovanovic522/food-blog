@@ -1,0 +1,56 @@
+@media screen and (min-width: 375px) and (max-width: 900px) {
+  #header #hero-header {
+    width: $tablet-width;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 768px) {
+  #header {
+    background-position: -124px 198px;
+    height: 811px;
+    #hero-header {
+      margin-top: 129px;
+      #introduction-header {
+        width: 372/720 * 100%;
+        width: 100%;
+        z-index: 2;
+        h1 {
+          left: -3px;
+          position: relative;
+
+          font-size: 58px;
+          line-height: 1.172;
+        }
+
+        p {
+          line-height: 1.778;
+          margin: 42px 0 56px;
+        }
+      }
+      #illustration-header {
+        img {
+          position: absolute;
+          right: -0.7%;
+          top: 337px;
+          max-width: 387px;
+          z-index: 1;
+        }
+      }
+    }
+  }
+}
+// LOVERING
+@media screen and (max-width: 696px) {
+  #illustration-header {
+    img {
+      top: 480px !important;
+      max-width: 340px !important;
+      z-index: 1;
+    }
+  }
+}
+//REMOVING BACKGROUND SHAPE TO PREVENT OVERLAPING WITH ILLUSTRATION
+@media screen and (max-width: 600px) {
+  #header {
+    background-image: none;
+  }
+}

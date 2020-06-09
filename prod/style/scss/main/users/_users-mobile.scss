@@ -1,0 +1,85 @@
+//MOVING ARROWS CLOSER TO THE EDGE
+
+@media screen and (max-width: 700px) {
+  #users {
+    .prev {
+      left: 15/650/100%;
+    }
+    .next {
+      right: 17/650/100%;
+    }
+  }
+}
+//REMOVING PADDINGS
+@media screen and (max-width: 650px) {
+  #users {
+    .slide {
+      padding: 40px 0 36px 0;
+      .person {
+        padding: 0;
+        img {
+          width: 86px;
+          height: 86px;
+          border-width: 4px;
+        }
+      }
+      .statement {
+        font-size: 14px;
+        line-height: 1.571;
+      }
+    }
+  }
+}
+//CHANGING FLEX DIRECTION TO COLUMN AND CENTERING ELEMENTS
+@media screen and (max-width: 568px) {
+  #users {
+    height: 578px;
+    .prev,
+    .next {
+      top: auto;
+      bottom: 25px;
+    }
+    .prev {
+      left: 138/375 * 100%;
+    }
+    .next {
+      right: 138/375 * 100%;
+    }
+    h2 {
+      font-size: 22px;
+      padding: 56px 0 58px;
+    }
+
+    .slide {
+      flex-direction: column;
+      text-align: center;
+      padding: 45px 0 36px;
+      max-height: 100%;
+      .person {
+        min-width: 0px;
+        margin: 0 auto;
+        text-align: left;
+        .person-info p {
+          padding: 7px 0 0 2px;
+        }
+      }
+      .statement {
+        font-size: 14px;
+        margin: 0 51/335 * 100%;
+        padding-top: 34px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 350px) {
+  #users .slide {
+    min-width: 0px;
+  }
+}
+@media screen and (max-width: 300px) {
+  #users .prev,
+  #users .next {
+    top: auto;
+    bottom: 5px;
+  }
+}

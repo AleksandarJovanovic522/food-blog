@@ -1,0 +1,128 @@
+@media screen and (max-width: 390px) {
+  #recipes {
+    .recipe .recipe-info p {
+      font-size: 16px;
+    }
+    .other-recipes p {
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #recipes {
+    height: 667px;
+    h2 {
+      font-size: 22px;
+      padding: 57px 0 33px;
+    }
+    .show-recipes {
+      display: none;
+    }
+    .latest-recipes-wrapper {
+      width: $mobile-width;
+    }
+
+    .recipe {
+      width: 162/335 * 100%;
+      margin-bottom: 12px;
+      .recipe-img {
+        height: 107px;
+      }
+      .tortilla {
+        background-position-y: -68px;
+      }
+      .cereal {
+        background-position-y: -60px;
+      }
+      .sauce {
+        background-position-y: -42px;
+      }
+      .recipe-info {
+        height: 134px;
+        padding: 21px 15/162 * 100%;
+        h3 {
+          font-size: 10px;
+        }
+        p {
+          padding-top: 6px;
+        }
+        .time,
+        .comments {
+          font-size: 10px;
+        }
+        .time {
+          left: 15/162 * 100%;
+          bottom: 19px;
+          img {
+            width: 11px;
+          }
+          .time-amount {
+            bottom: 2px;
+          }
+        }
+
+        .comments {
+          display: none;
+        }
+      }
+    }
+    .other-recipes {
+      background-size: initial;
+      background-position-y: -112px;
+      h3,
+      p {
+        left: 16/162 * 100%;
+      }
+      h3 {
+        bottom: 87px;
+        font-size: 10px;
+        letter-spacing: 1.2px;
+      }
+      p {
+        bottom: 29px;
+        line-height: 1.375;
+      }
+    }
+  }
+}
+//AGAIN MOVING IMAGES DOWN AND REDUCING HEIGHT OF DIV ON DIFFERENT TABLET WINDOW SIZES
+@media screen and (max-width: 300px) {
+  #recipes .recipe {
+    .tortilla {
+      background-position-y: -35px;
+    }
+    .cereal {
+      background-position-y: -40px;
+    }
+    .sauce {
+      background-position-y: -25px;
+    }
+  }
+}
+// @media screen and (max-width: 550px) {
+//   #recipes .recipe {
+//     .tortilla {
+//       background-position-y: -110px;
+//     }
+//     .cereal {
+//       background-position-y: -100px;
+//     }
+//     .sauce {
+//       background-position-y: -60px;
+//     }
+//   }
+// }
+// @media screen and (max-width: 450px) {
+//   #recipes .recipe {
+//     .tortilla {
+//       background-position-y: -60px;
+//     }
+//     .cereal {
+//       background-position-y: -70px;
+//     }
+//     .sauce {
+//       background-position-y: -40px;
+//     }
+//   }
+// }

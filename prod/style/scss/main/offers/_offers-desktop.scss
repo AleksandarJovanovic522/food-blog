@@ -1,0 +1,102 @@
+#offers {
+  background-color: #fafcff;
+  height: 1056px;
+  h2 {
+    @include font($fontFamily: $lora-bold, $fontSize: 34px);
+    text-align: center;
+    padding-top: 89px;
+  }
+
+  .paragraph-offers {
+    @include font($fontColor: $blue-secondary, $fontSize: 18px);
+    text-align: center;
+    padding: 27px 0 83px;
+  }
+
+  // TABS
+  #tabs {
+    width: 100%;
+    margin: 0 auto;
+    #tab {
+      display: flex;
+      max-width: 631px;
+      margin: 0 auto;
+      overflow: hidden;
+
+      button {
+        @include font($fontFamily: $lora-bold, $fontSize: 28px);
+
+        width: 100%;
+        line-height: 1.5;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-bottom: 4px solid $blue-lightest;
+        padding-bottom: 10px;
+        @include transition(border);
+
+        &:hover {
+          border-bottom-color: $green-offers;
+        }
+        &.active {
+          border-bottom-color: $green-offers;
+        }
+      }
+    }
+    .tab-content {
+      display: none;
+      width: $desktop-width;
+      margin: 0 auto;
+      padding-top: 110px;
+      @include fade;
+      .text-tab {
+        position: relative;
+        width: 601/1181 * 100%;
+        // margin-right: 173/1181 * 100%;
+        min-width: 411px;
+        padding-top: 17px;
+
+        h3 {
+          @include font(
+            $fontFamily: $lora-bold,
+            $fontSize: 46px,
+            $fontColor: $green-offers
+          );
+          line-height: 1.13;
+        }
+        p {
+          max-width: 601px;
+          @include font($fontSize: 18px);
+          text-align: left;
+          line-height: 1.556;
+          &:first-of-type {
+            padding: 49px 0 28px;
+          }
+        }
+        button {
+          @include button-orange;
+          position: absolute;
+          top: 417px;
+        }
+      }
+      .illustration-tab {
+        width: 400/1181 * 100%;
+        margin-left: auto;
+        img {
+          width: 100%;
+          max-width: 400px;
+          min-width: 223px;
+        }
+      }
+    }
+  }
+}
+
+// SETING PADDING TO BUTTON SO IT DONT MERGE WITH PARAGRAPH
+@media screen and (max-width: 1381px) {
+  #offers #tabs .tab-content .text-tab button {
+    position: relative;
+    top: 0;
+    margin-top: 53px;
+  }
+}

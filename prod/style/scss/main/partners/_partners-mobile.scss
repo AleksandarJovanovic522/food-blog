@@ -1,0 +1,30 @@
+@media screen and (max-width: 566px) {
+  .partners {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 177px;
+    img {
+      margin-bottom: 33px;
+    }
+    .img-unilever {
+      @include partner-img-mobile($imgWidth: 87px);
+    }
+    .img-wrigley {
+      @include partner-img-mobile($imgWidth: 180px);
+    }
+    .img-cheerios {
+      @include partner-img-mobile($imgWidth: 111px);
+    }
+    .img-giant {
+      @include partner-img-mobile($imgWidth: 63px);
+    }
+    .img-heinz {
+      @include partner-img-mobile($imgWidth: 168px);
+    }
+  }
+}
+@media screen and (max-width: 375px) {
+  .partners {
+    width: $mobile-width;
+  }
+}

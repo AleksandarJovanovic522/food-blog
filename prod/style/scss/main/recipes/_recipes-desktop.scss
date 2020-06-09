@@ -1,0 +1,223 @@
+#recipes {
+  position: relative;
+  width: 100%;
+  height: 658px;
+  margin: 0 auto;
+  background-color: #fafcff;
+  .latest-recipes-wrapper {
+    width: $desktop-width;
+    margin: 0 auto;
+    display: relative;
+  }
+  h2 {
+    @include font($fontFamily: $lora-bold, $fontSize: 34px);
+    padding: 97px 0 52px;
+  }
+  .show-recipes {
+    @include font($fontSize: 14px, $fontColor: $orange-primary);
+    position: absolute;
+    top: -36px;
+    right: 2px;
+
+    display: inline-block;
+    text-decoration: none;
+
+    &::after {
+      content: '';
+      display: block;
+      position: relative;
+      top: 2px;
+      width: 0;
+      height: 1px;
+      background-color: $orange-primary;
+      @include transition(width);
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
+  .recipe-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+  .recipe {
+    width: 282/1181 * 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 13px #eee;
+    overflow: hidden;
+    @include transition(transform);
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.05);
+    }
+    .recipe-img {
+      width: 100%;
+      height: 200px;
+    }
+    .tortilla {
+      background-image: url('../images/picture-recipe-tortilla.png');
+      background-position-y: -109px;
+      background-size: cover;
+    }
+    .cereal {
+      position: relative;
+      background-image: url('../images/picture-recipe-cereal.png');
+      background-position-y: -100px;
+      background-size: cover;
+
+      .trending {
+        @include font(
+          $fontFamily: $lato-bold,
+          $fontSize: 10px,
+          $fontColor: #fff
+        );
+        position: absolute;
+        top: 14px;
+        right: 15px;
+        width: 82px;
+        height: 25px;
+        background: $green-lightest;
+        border-radius: 10px;
+        line-height: 21px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+      }
+    }
+    .sauce {
+      background-image: url('../images/picture-recipe-sauce.png');
+      background-position-y: -63px;
+      background-size: cover;
+    }
+    .recipe-info {
+      position: relative;
+      width: 100%;
+      height: 161px;
+      background-color: #fff;
+      padding: 22px 30/282 * 100%;
+      h3 {
+        @include font(
+          $fontFamily: $lato-bold,
+          $fontSize: 12px,
+          $fontColor: $orange-primary
+        );
+        letter-spacing: 1.44px;
+        text-transform: uppercase;
+      }
+      p {
+        @include font($fontFamily: $lora-bold, $fontSize: 18px);
+        padding-top: 10px;
+        line-height: 1.333;
+      }
+      .time,
+      .comments {
+        @include font(
+          $fontFamily: $lato-bold,
+          $fontSize: 12px,
+          $fontColor: $blue-lighter
+        );
+        position: absolute;
+        bottom: 25px;
+      }
+      .time {
+        left: 30/282 * 100%;
+        .time-amount {
+          position: relative;
+          bottom: 1px;
+          left: 8px;
+        }
+      }
+      .comments {
+        right: 30/282 * 100%;
+        .comments-number {
+          position: relative;
+          bottom: 1px;
+          right: 5px;
+        }
+      }
+    }
+  }
+  .other-recipes {
+    //ORANGE OVERLAY
+    background: linear-gradient(
+        rgba(243, 166, 66, 0.85),
+        rgba(243, 166, 66, 0.85)
+      ),
+      url('../images/picture-recipe-spaghetti.png');
+    background-size: cover;
+    position: relative;
+    h3,
+    p {
+      position: absolute;
+      left: 33/282 * 100%;
+    }
+
+    h3 {
+      @include font($fontFamily: $lato-bold, $fontSize: 12px, $fontColor: #fff);
+      letter-spacing: 1.44px;
+      text-transform: uppercase;
+      bottom: 134px;
+    }
+    p {
+      @include font($fontFamily: $lora-bold, $fontSize: 28px, $fontColor: #fff);
+      line-height: 1.143;
+      bottom: 55px;
+    }
+  }
+}
+//MOVING IMAGES DOWN AND REDUCING HEIGHT OF DIV ON DIFFERENT DESKTOP WINDOW SIZES
+
+@media screen and (max-width: 1400px) {
+  #recipes .recipe {
+    .tortilla {
+      background-position-y: -69px;
+    }
+    .cereal {
+      background-position-y: -60px;
+    }
+    .sauce {
+      background-position-y: -30px;
+    }
+  }
+}
+
+@media screen and (max-width: 1204px) {
+  #recipes .recipe {
+    .tortilla {
+      background-position-y: -39px;
+    }
+    .cereal {
+      background-position-y: -30px;
+    }
+    .sauce {
+      background-position-y: -20px;
+    }
+  }
+}
+@media screen and (max-width: 1050px) {
+  #recipes {
+    .recipe {
+      .recipe-img {
+        height: 150px;
+      }
+      .recipe-info p {
+        font-size: 15px;
+      }
+      .tortilla {
+        background-position-y: -50px;
+      }
+      .cereal {
+        background-position-y: -55px;
+      }
+      .sauce {
+        background-position-y: -30px;
+      }
+    }
+    .other-recipes p {
+      font-size: 23px;
+    }
+  }
+}

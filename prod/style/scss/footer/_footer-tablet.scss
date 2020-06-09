@@ -1,0 +1,95 @@
+@media screen and (max-width: 900px) {
+  #footer {
+    .footer-wrapper {
+      width: $tablet-width;
+    }
+    .copyright h5 {
+      width: $tablet-width;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #footer {
+    .footer-content {
+      bottom: 0;
+    }
+    //----------------------
+    //SUBSCRIBE START
+    //----------------------
+    .subscribe {
+      width: 100%;
+      min-width: 0;
+      padding: 0 38px;
+      margin: 0;
+      bottom: 104px;
+
+      h3 {
+        font-size: 22px;
+        padding: 51px 0 0 23px;
+      }
+      form {
+        padding: 16px 0 10px;
+        input[type='email'] {
+          font-size: 14px;
+          width: 396/644 * 100%;
+          padding-left: 23px;
+        }
+      }
+      p {
+        font-size: 12px;
+        padding: 0 0 47px 25px;
+      }
+    }
+    //----------------------
+    //SUBSCRIBE END
+    //----------------------
+    .info {
+      bottom: 20px;
+      width: 260/720 * 100%;
+
+      h4 img {
+        max-width: 145px;
+      }
+
+      p {
+        padding: 33px 0 21px;
+        font-size: 14px;
+        line-height: 1.857;
+      }
+      ul li {
+        font-size: 14px;
+        padding-bottom: 12px;
+        .tel-mail {
+          padding-right: 8px;
+        }
+      }
+    }
+    .links {
+      position: relative;
+      bottom: 4px;
+      width: 164/720 * 100%;
+      min-width: 120px;
+      margin-bottom: 42px;
+
+      h4 {
+        font-size: 18px;
+        padding-bottom: 33px;
+      }
+      li {
+        margin-bottom: 24px;
+        a {
+          font-size: 14px;
+        }
+      }
+    }
+    .recipe {
+      width: 164/720 * 100%;
+      min-width: 146px;
+      margin-right: 21/720 * 100%;
+    }
+    .copyright h5 {
+      font-size: 12px;
+    }
+  }
+}

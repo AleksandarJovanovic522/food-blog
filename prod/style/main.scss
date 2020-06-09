@@ -1,0 +1,84 @@
+//RESET
+@import 'scss/reset';
+
+//VARIABLES
+@import 'scss/variables';
+
+//MIXINS
+
+@import 'scss/mixins';
+
+//FONT FACE
+@import 'scss/font-face';
+
+//-----------------------
+//HEADER
+//-----------------------
+
+@import 'scss/header/header-desktop';
+@import 'scss/header/header-tablet';
+@import 'scss/header/header-mobile';
+//NAVIGATION
+@import 'scss/header/navigation/navigation-desktop';
+@import 'scss/header/navigation/navigation-tablet';
+@import 'scss/header/navigation/navigation-mobile';
+
+//------------------
+//MAIN
+//------------------
+
+//OFFERS
+@import 'scss/main/offers/offers-desktop';
+@import 'scss/main/offers/offers-tablet';
+@import 'scss/main/offers/offers-mobile';
+
+//USERS
+@import 'scss/main/users/users-desktop';
+@import 'scss/main/users/users-tablet';
+@import 'scss/main/users/users-mobile';
+
+//RECIPES
+@import 'scss/main/recipes/recipes-desktop';
+@import 'scss/main/recipes/recipes-tablet';
+@import 'scss/main/recipes/recipes-mobile';
+
+//POPULAR RECIPE
+@import 'scss/main/popular-recipe/popular-recipe-desktop';
+@import 'scss/main/popular-recipe/popular-recipe-tablet';
+@import 'scss/main/popular-recipe/popular-recipe-mobile';
+
+//PARTNERS
+@import 'scss/main/partners/partners-desktop';
+@import 'scss/main/partners/partners-tablet';
+@import 'scss/main/partners/partners-mobile';
+
+//-----------------------
+//HEADER
+//-----------------------
+
+@import 'scss/footer/footer-desktop';
+@import 'scss/footer/footer-tablet';
+@import 'scss/footer/footer-mobile';
+
+#wrapper {
+  width: 100%;
+}
+body {
+  overflow-x: hidden;
+}
+
+::selection {
+  background: $orange-secondary;
+}
+//HIDING SCROLLBAR FOR TABLET AND MOBILE
+@media screen and (max-width: 768px) {
+  .wrapper {
+    /* This is the magic bit for Firefox */
+    scrollbar-width: none;
+  }
+
+  .wrapper::-webkit-scrollbar {
+    /* This is the magic bit for WebKit */
+    display: none;
+  }
+}

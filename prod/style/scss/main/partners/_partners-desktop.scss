@@ -1,0 +1,21 @@
+.partners {
+  display: flex;
+  justify-content: space-between;
+  width: $desktop-width;
+  margin: 0 auto 248px;
+  .img-unilever {
+    @include partner-img-desktop(117px);
+  }
+  .img-wrigley {
+    @include partner-img-desktop(241px);
+  }
+  .img-cheerios {
+    @include partner-img-desktop(148px);
+  }
+  .img-giant {
+    @include partner-img-desktop(85px);
+  }
+  .img-heinz {
+    @include partner-img-desktop(227px);
+  }
+}

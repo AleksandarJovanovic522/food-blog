@@ -1,0 +1,84 @@
+//FONT
+
+@mixin font(
+  $fontFamily: $lato-regular,
+  $fontSize: 16px,
+  $fontColor: $blue-primary
+) {
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  color: $fontColor;
+}
+//TRANSITION
+@mixin transition($type) {
+  transition: $type 0.4s ease-in;
+}
+@mixin fade {
+  animation: 0.4s fade;
+  @keyframes fade {
+    from {
+      opacity: 0.1;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+//BUTTON
+@mixin button-orange($width: 200px, $height: 55px, $font-size: 16px) {
+  @include font(
+    $fontFamily: $lato-bold,
+    $fontSize: $font-size,
+    $fontColor: #fff
+  );
+  width: $width;
+  height: $height;
+  align-content: center;
+  text-align: center;
+  border-radius: 55px;
+  background-color: $orange-secondary;
+  line-height: $height;
+  text-align: center;
+  cursor: pointer;
+  @include transition(background-color);
+  // transition: transform 0.5s ease;
+  &:hover {
+    background-color: $orange-primary;
+  }
+}
+
+//HOVER NAVIGATION
+@mixin underline($width) {
+  content: '';
+  display: block;
+  position: relative;
+  bottom: 0;
+  top: 12px;
+  left: 50%;
+  height: 0;
+  width: $width;
+  background: transparent;
+}
+
+@mixin underline-scale($scale, $height: 2px) {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: $height;
+  background: $orange-secondary;
+  @include transition(transform);
+  transform: scaleX($scale);
+}
+
+//SCALING IMAGES ACCORDING TO SIZE OF THE WRAPPER
+
+@mixin partner-img-desktop($imgWidth) {
+  width: $imgWidth/1181px * 100%;
+}
+@mixin partner-img-tablet($imgWidth) {
+  width: $imgWidth/720px * 100%;
+}
+@mixin partner-img-mobile($imgWidth) {
+  width: $imgWidth/335px * 100%;
+}

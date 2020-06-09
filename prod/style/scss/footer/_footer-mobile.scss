@@ -1,0 +1,110 @@
+//CHANGING THE LAYOUT OF NEWSLETTER SUBSCRIPTION AND FOOTER CONTENT
+
+@media screen and (max-width: 566px) {
+  #footer {
+    //----------------------
+    //SUBSCRIBE START
+    //----------------------
+    .subscribe {
+      bottom: 132px;
+      padding: 0;
+
+      h3 {
+        font-size: 18px;
+        text-align: center;
+        padding: 33px 0 0;
+      }
+      form {
+        flex-direction: column;
+        padding: 27px 0 0;
+        input[type='email'] {
+          width: 289/335 * 100%;
+
+          height: 55px;
+          padding-left: 26px;
+          margin: 0 auto;
+        }
+        input[type='submit'] {
+          margin: 47px auto 22px;
+          width: 175px;
+          height: 47px;
+          line-height: 47px;
+          font-size: 14px;
+        }
+      }
+      p {
+        position: absolute;
+        top: 55%;
+        left: 64%;
+        transform: translateX(-50%);
+        width: 100%;
+        padding: 0;
+        font-size: 10px;
+      }
+    }
+    //----------------------
+    //SUBSCRIBE END
+    //----------------------
+    .info {
+      bottom: 63px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      h4 img {
+        max-width: 218px;
+      }
+
+      p {
+        width: 270/335 * 100%;
+        margin: 0 auto;
+        padding: 27px 0 11px;
+        font-size: 14px;
+        line-height: 1.857;
+      }
+      ul li {
+        font-size: 14px;
+        padding-bottom: 12px;
+        .tel-mail {
+          padding-right: 8px;
+        }
+      }
+    }
+    section:not(.recipe):not(.info):not(.subscribe) {
+      bottom: 26px !important;
+    }
+    .links {
+      width: 100%;
+      min-width: 0;
+      margin: 0 auto;
+      bottom: 31px;
+      text-align: center;
+
+      h4 {
+        font-size: 18px;
+        padding-bottom: 33px;
+      }
+      li {
+        margin-bottom: 24px;
+        a {
+          font-size: 14px;
+        }
+      }
+    }
+    .recipe {
+      width: 100%;
+      min-width: 0;
+      margin: 0 auto 12px;
+    }
+    .copyright h5 {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+@media screen and (max-width: 375px) {
+  #footer {
+    .footer-wrapper {
+      width: $mobile-width;
+    }
+  }
+}

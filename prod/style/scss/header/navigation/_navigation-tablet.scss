@@ -1,0 +1,129 @@
+@media screen and (min-width: 376px) and (max-width: 900px) {
+  #navigation {
+    width: $tablet-width;
+  }
+}
+@media screen and (max-width: 768px) {
+  #navigation {
+    padding-top: 43px;
+
+    #menu {
+      padding: 0;
+      .logo {
+        position: absolute;
+        z-index: 5;
+        img {
+          width: 230px;
+          max-width: 230px;
+        }
+      }
+      .search {
+        order: 1;
+        margin-left: auto;
+        .search-icon {
+          top: 2px;
+          right: 25px;
+          img {
+            width: 33px;
+          }
+        }
+      }
+
+      .hamburger {
+        padding: 0 !important;
+        order: 2;
+        display: inline;
+        img {
+          width: 38px;
+        }
+      }
+      .menu-item:not(.search):not(.hamburger) {
+        display: none;
+      }
+      //SEARCH
+    }
+    .search-clicked {
+      .logo {
+        display: none;
+      }
+      .hamburger {
+        padding: 0 !important;
+        top: -9px !important;
+        right: -21px !important;
+      }
+      .search {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100%;
+        max-width: 658/720 * 100%;
+        border-bottom: 3px solid $orange-secondary;
+        .floating-label {
+          font-size: 16px;
+          left: 15.333%;
+        }
+        .floating-label-lift {
+          font-size: 14px;
+        }
+        .search-icon {
+          top: 4px !important;
+          right: -25px !important;
+        }
+        .search-bar {
+          width: 70%;
+          line-height: 3;
+          right: -58px !important;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+// -----------------------------
+//DROPDOWN MENU
+// -----------------------------
+
+.dropdown-menu {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 4;
+  left: 0;
+  top: 0;
+  background-color: $orange-lighter;
+  overflow-x: hidden;
+  @include transition(all);
+  .dropdown-content {
+    position: relative;
+    top: 185px;
+    width: 100%;
+    text-align: center;
+    .home {
+      &:after {
+        @include underline(100%);
+        @include underline-scale(0.18, 3px);
+      }
+    }
+
+    a {
+      font-family: $lato-bold;
+      padding: 24px;
+      text-decoration: none;
+      font-size: 32px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+      &:hover,
+      &:focus {
+        color: #f1f1f1;
+      }
+    }
+  }
+  .close-btn {
+    position: absolute;
+    top: 42px;
+    right: 25px;
+    img {
+      width: 36px;
+    }
+  }
+}

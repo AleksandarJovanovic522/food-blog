@@ -1,0 +1,96 @@
+//SETTING SMALLER PADDINGS BECAUSE DISTANCE BETWEEN ELEMENTS IS TOO BIG
+//POSITIONING ILLUSTRATION LOWER FOR ESTETICS
+@media screen and (max-width: 700px) {
+  #offers #tabs .tab-content .illustration-tab img {
+    min-width: 120px;
+    top: 130px;
+  }
+}
+@media screen and (max-width: 566px) {
+  #offers {
+    h2 {
+      font-size: 22px;
+    }
+    #tabs {
+      #tab button {
+        font-size: 20px;
+      }
+
+      .tab-content {
+        width: $mobile-width;
+        padding-top: 30px;
+        .text-tab {
+          width: 100%;
+          min-width: 100%;
+          h3 {
+            font-size: 22px;
+            text-align: center;
+          }
+          p {
+            font-size: 14px;
+          }
+          button {
+            display: block;
+            margin: 45px auto;
+          }
+        }
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+//MAIN MOBILE STYLE
+@media screen and (max-width: 375px) {
+  #offers {
+    height: 730px;
+    h2 {
+      padding-top: 42px;
+      width: 210px;
+      margin: 0 auto;
+      line-height: 1.445;
+    }
+
+    .paragraph-offers {
+      width: 300px;
+      margin: 0 auto;
+      padding: 21px 0 31px;
+      line-height: 1.312;
+    }
+
+    // TABS
+    #tabs {
+      #tab button {
+        font-size: 16px;
+        line-height: 2.625;
+        padding-bottom: 6px;
+      }
+
+      .tab-content {
+        padding-top: 51px;
+        .text-tab {
+          padding-top: 0;
+
+          h3 {
+            line-height: 1.273;
+          }
+          p {
+            line-height: 1.571;
+            &:first-of-type {
+              padding: 34px 0 22px;
+            }
+          }
+          button {
+            margin-top: 42px;
+            width: 175px;
+            height: 47px;
+            line-height: 47px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

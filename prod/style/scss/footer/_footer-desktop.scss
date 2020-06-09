@@ -1,0 +1,143 @@
+#footer {
+  background-color: $green-primary;
+  .footer-wrapper {
+    width: $desktop-width;
+    margin: 0 auto;
+  }
+  .footer-content {
+    position: relative;
+    bottom: 25px;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+  //----------------------
+  //SUBSCRIBE START
+  //----------------------
+  .subscribe {
+    width: 886/1181 * 100%;
+    min-width: 620px;
+    padding: 0 76px 0 73px;
+    margin: 0 auto;
+    background: url('../images/shape-footer-background.png') no-repeat #fff;
+    background-size: cover;
+    border-radius: 10px;
+    position: relative;
+    bottom: 115px;
+    box-shadow: 0 0 5px rgba(129, 129, 129, 0.205);
+
+    h3 {
+      @include font(
+        $fontFamily: $lora-bold,
+        $fontColor: $blue-primary,
+        $fontSize: 26px
+      );
+      padding: 38px 0 0 22px;
+    }
+    form {
+      display: flex;
+      padding: 25px 0 10px;
+      input[type='email'] {
+        @include font;
+        width: 504/737 * 100%;
+        border: 1px solid #f4f4f4;
+        border-radius: 100px;
+        padding-left: 26px;
+        &:focus {
+          outline: none;
+        }
+        &:-moz-placeholder {
+          /* Mozilla Firefox 4 to 18 */
+
+          opacity: 1;
+        }
+        &::-moz-placeholder {
+          /* Mozilla Firefox 19+ */
+
+          opacity: 1;
+        }
+      }
+      input[type='submit'] {
+        display: block;
+        border: none;
+        @include button-orange;
+        margin-left: auto;
+      }
+    }
+    p {
+      @include font($fontColor: $blue-secondary, $fontSize: 12px);
+      padding: 0 0 47px 25px;
+    }
+  }
+  //----------------------
+  //SUBSCRIBE END
+  //----------------------
+  .info {
+    position: relative;
+    bottom: 28px;
+    width: 400/1181 * 100%;
+    h4 {
+      img {
+        width: 100%;
+        max-width: 180px;
+      }
+    }
+    p {
+      @include font($fontColor: $green-lighter);
+      line-height: 1.375;
+      padding: 46px 0 41px;
+    }
+    ul li {
+      padding-bottom: 10px;
+      @include font($fontColor: $green-lighter, $fontSize: 14px);
+      .tel-mail {
+        font-family: $lato-bold;
+        padding-right: 9px;
+      }
+    }
+  }
+  .links {
+    width: 202/1181 * 100%;
+
+    min-width: 150px;
+    margin-bottom: 21px;
+
+    h4 {
+      @include font($fontFamily: $lora-bold, $fontSize: 22px, $fontColor: #fff);
+      padding-bottom: 33px;
+    }
+    li {
+      margin-bottom: 22px;
+      a {
+        @include font($fontColor: $green-lighter);
+        @include transition(color);
+        text-decoration: none;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+  .recipe {
+    width: 200/1181 * 100%;
+    min-width: 175px;
+    margin-right: 101/1181 * 100%;
+    margin-left: auto;
+  }
+  .copyright {
+    width: 100%;
+    height: 60px;
+    background: $green-secondary;
+
+    h5 {
+      @include font($fontSize: 14px, $fontColor: $green-lighter);
+      position: relative;
+      top: 47%;
+      transform: translatey(-50%);
+      width: $desktop-width;
+      margin: 0 auto;
+      font-weight: 400;
+    }
+  }
+}

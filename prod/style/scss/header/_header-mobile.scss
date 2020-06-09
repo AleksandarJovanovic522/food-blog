@@ -1,0 +1,41 @@
+@media screen and (max-width: 375px) {
+  #header {
+    background-position: -124px 198px;
+    height: 720px;
+    #hero-header {
+      width: $mobile-width;
+      margin-top: 56px;
+      #introduction-header {
+        width: 100%;
+        z-index: 2;
+        h1 {
+          left: -3px;
+          position: relative;
+          font-size: 42px;
+          line-height: 1.238;
+        }
+
+        p {
+          max-width: 285/335 * 100%;
+          font-size: 16px;
+          line-height: 1.75;
+          margin: 34px 0 59px;
+          br {
+            display: none;
+          }
+        }
+        button {
+          @include button-orange(175px, 47px, 14px);
+        }
+      }
+      #illustration-header {
+        img {
+          position: absolute;
+          right: -5.7%;
+          top: 405px !important;
+          max-width: 286px !important;
+        }
+      }
+    }
+  }
+}

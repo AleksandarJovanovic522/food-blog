@@ -1,0 +1,21 @@
+@media screen and (max-width: 900px) {
+  .partners {
+    width: $tablet-width;
+    margin: 0 auto 201px;
+    .img-unilever {
+      @include partner-img-tablet($imgWidth: 71px);
+    }
+    .img-wrigley {
+      @include partner-img-tablet($imgWidth: 147px);
+    }
+    .img-cheerios {
+      @include partner-img-tablet($imgWidth: 91px);
+    }
+    .img-giant {
+      @include partner-img-tablet($imgWidth: 52px);
+    }
+    .img-heinz {
+      @include partner-img-tablet($imgWidth: 138px);
+    }
+  }
+}

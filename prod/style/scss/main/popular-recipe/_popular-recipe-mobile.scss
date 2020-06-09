@@ -1,0 +1,67 @@
+@media screen and (max-width: 566px) {
+  #popular-recipe {
+    background-position: right -86px top 300px;
+    background-size: 312px auto;
+    h2 {
+      max-width: 410px;
+      font-size: 22px;
+      line-height: 1.445;
+    }
+    .ingridients .lamb ul li,
+    .ingridients .hummus ul li {
+      @include font($fontColor: $blue-primary, $fontSize: 14px);
+    }
+    button {
+      margin-bottom: 75px;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #popular-recipe {
+    .popular-recipe-wrapper {
+      width: $mobile-width;
+    }
+    .popular-span {
+      width: 122px;
+      height: 21px;
+      margin: 43px 0 10px;
+      font-size: 8px;
+      line-height: 21px;
+      letter-spacing: 0.96px;
+    }
+
+    h2 {
+      max-width: 285px;
+    }
+    p {
+      margin: 33px 0 45px;
+    }
+    .ingridients {
+      h3 {
+        font-size: 16px;
+        margin-bottom: 41px;
+      }
+
+      .lamb h4,
+      .hummus h4 {
+        font-size: 14px;
+      }
+      .lamb {
+        margin-bottom: 28px;
+      }
+      .lamb ul li,
+      .hummus ul li {
+        padding-top: 22px;
+      }
+      .lamb ul li::before,
+      .hummus ul li::before {
+        margin-right: 5px;
+      }
+    }
+    button {
+      @include button-orange(175px, 47px, 14px);
+      margin-top: 58px;
+    }
+  }
+}
